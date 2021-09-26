@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        *{
+            margin :0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        .center-div{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        a{
+            height :100px;
+            width: 100px;
+            background-color: #f5f6fa;
+            margin: 10px;
+            text-align: center;
+            border-radius: 50px;
+            box-shadow: 1px 4px 2px 2px #dcdde1;
+            line-height: 110px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .fa-instagram{
+            color:#e84393 ;
+        }
+        .fa-youtube{
+            color: #e84118;
+        }
+        .fa-linkedin{
+            color: #0097e6;
+        }
+        .fa-twitter{
+            color: #0097e6;
+        }
+
+        a i{
+            transition: all .3s linear;
+        }
+        a:hover .fa{
+            transform: scale(1.5);
+            color: #f5f6fa;
+        }
+        a::before{
+            content:'';
+            width:120%;
+            height: 120%;
+            position: absolute;
+            top:90%;
+            left:-50%;
+            background-color: #00a8ff;
+            transform: rotate(60deg);
+        }
+
+        a:hover::before{
+            animation: socialicons .8s 1;
+            animation-fill-mode: forwards;  
+        }
+
+        @keyframes socialicons {
+            0%{
+                top: 90%;
+                left: -50%;
+            }
+            50%{
+                top:-60%;
+                left: -10%;
+            }
+            100%{
+                top:-10%;
+                left:-10%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="center-div">
+        <a href="#">
+            <i class="fa fa-2x fa-facebook"></i>
+        </a>
+        <a href="#">
+            <i class="fa fa-2x fa-twitter"></i>
+        </a>
+        <a href="#">
+            <i class="fa fa-2x fa-instagram"></i>
+        </a>
+        <a href="#">
+            <i class="fa fa-2x fa-youtube"></i>
+        </a>
+        <a href="#">
+            <i class="fa fa-2x fa-linkedin"></i    >
+        </a>
+    </div>
+</body>
+</html>

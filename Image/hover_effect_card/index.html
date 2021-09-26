@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap');
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Mulish', sans-serif;
+            background: #b1b1b1;
+            height: 100vh;
+        }
+
+        .container{
+            height: 300px;
+            width: 450px;
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .container img{
+            width: 100%;
+            height: 100%;
+            transition: all 0.3s;
+        }
+        .container::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: #6e6b6e;
+            opacity: 0.5;
+        }
+
+        .info{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .info h2{
+            text-align: center;
+            font-size: 17px;
+            padding: 20px;
+            margin-top: 20px;
+            background: #0a92b4;
+        }
+
+        .info p{
+            font-size: 16px;
+            width: 80%;
+            text-transform: capitalize;
+            /* 
+            width: 100px;
+            padding: 15px;
+            margin-bottom: 20px; */
+            color: #fff;
+            text-align: center;
+            align-self: center;
+        }
+
+        .info a{
+            text-decoration: none;
+            background: #068db6;
+            color: #fff;
+            width: 100px;
+            padding: 10px 15px;
+            margin-bottom: 20px;
+            text-align: center;
+            align-self: center;
+        }
+
+        .container{
+            background: #1b1b1b;
+            border: 10px solid #fff;
+
+        }
+
+        /* hover effects */
+        .container:hover img{
+            transform: rotate(720deg) scale(0);
+            opacity: 0;
+        }
+
+        .container::before{
+            background-color: #27aec0;
+            transition: all 0.3s;
+            opacity: 0;
+        }
+
+        .container:hover::before{
+            opacity: 1;
+            transition-delay: 0.5s;
+        }
+
+        .info a,p,h2{
+            transform: translateY(-300px);
+            transition: all 0.2s;
+        }
+
+        .container:hover a{
+            transform: translateY(0);
+            transition-delay: 0.5s;
+        }
+
+        .container:hover p{
+            transform: translateY(0);
+            transition-delay: 0.7s;
+        }
+        .container:hover h2{
+            transform: translateY(0);
+            transition-delay: 0.9s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="logo.jpg" alt="logo">
+        <div class="info">
+
+            <h2>Heading</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, rem.</p>
+            <a href="#" targer="_blank">link</a>
+        </div>
+    </div>
+    
+</body>
+</html>

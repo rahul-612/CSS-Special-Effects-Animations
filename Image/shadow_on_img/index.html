@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html{
+            font-size: 62.5%;
+        }
+        .main_header{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        img{
+            width: 50rem;
+            height: 50rem;
+            transition: all .3s ease-in-out;
+        }
+        img:hover{
+            filter: drop-shadow(1rem 1rem 1rem rgb(255, 102, 0)); 
+        }
+    </style>
+</head>
+<body>
+    <header class="main_header">
+        <img src="img.png" alt="image" > <!--image should be of .png or .svg -->
+    </header>
+</body>
+</html>

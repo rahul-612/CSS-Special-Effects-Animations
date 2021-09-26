@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        div{
+            height:100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #74b9ff;
+        }
+        h1{
+            font-size: 20rem;
+            text-transform: uppercase;
+            color: white;
+            position: relative;
+        }
+        h1::before{
+            content: 'heading';
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 0;
+            color: #ff7675;
+            overflow: hidden;   
+            transition: 2s linear;
+        }
+
+        h1:hover::before{
+            width: 100%;
+            text-shadow: 5px 5px 2px #2d3436;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Heading</h1>
+    </div>
+</body>
+</html>
